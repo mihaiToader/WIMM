@@ -1,11 +1,15 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthenticationService } from '@app/core/authentification.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [
+    AuthenticationService
+  ],
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */

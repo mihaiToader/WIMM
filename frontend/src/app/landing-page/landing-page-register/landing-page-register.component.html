@@ -1,0 +1,18 @@
+<p>
+  landing-page-register works!
+</p>
+
+<p>
+  hardcoded register:
+</p>
+<div class="alert alert-success" role="alert" *ngIf="success">
+  <strong>Well done!</strong> Register with success
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="error">
+  <strong>Oh snap!</strong> Register failed
+</div>
+
+<button type="button" class="btn btn-primary" (click)="sendRegister()">Send register</button>
+
+<a routerLink="/" type="button" class="btn btn-danger">Back</a>
