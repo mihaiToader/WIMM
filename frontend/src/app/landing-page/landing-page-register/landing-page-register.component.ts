@@ -10,7 +10,8 @@ export class LandingPageRegisterComponent implements OnInit {
 
   error: boolean;
   success: boolean;
-
+  statusMessage:string = 'Loading data please wait';
+  model: any = {};
   constructor(private authenticationService: AuthenticationService) {
   }
 
@@ -18,21 +19,28 @@ export class LandingPageRegisterComponent implements OnInit {
   }
 
   sendRegister() {
+    console.log(this.model);
     this.authenticationService.register({
-      username: 'mihai1',
-      password: '12345678',
-      confirmPassword: '12345678',
+      username: this.model.username,
+      email:this.model.email,
+      password: this.model.password,
+      confirmPassword: this.model.confirmPassword
     })
-      .then((res) => {
+      .then((res) =>
+      {
         console.log(res);
         this.success = true;
         this.error = false;
+        this.statusMessage='Register with success!!!';
       })
       .catch((err) => {
         this.success = false;
         this.error = true;
-        console.log(err)
+       this.statusMessage='Username or email already exists!';
+        console.log(err);
       })
+
+
   }
 
 }

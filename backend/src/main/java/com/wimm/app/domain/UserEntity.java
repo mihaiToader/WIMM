@@ -30,7 +30,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author Alexandru Stoica
+ * @author Mihai Toafd
  * @version 1.0
  */
 
