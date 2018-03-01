@@ -33,8 +33,8 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public void registerConsumer(@RequestBody @Validated(UserEntity.ValidationRegister.class) UserEntity user) {
+    public UserEntity registerConsumer(@RequestBody @Validated(UserEntity.ValidationRegister.class) UserEntity user) {
         LOGGER.info("User " + user.getUsername() + " registers now ...");
-        userService.saveUser(user);
+        return userService.saveUser(user);
     }
 }

@@ -1,4 +1,35 @@
-<p>
-  landing-page-login works!
-</p>
-<a routerLink="/" type="button" class="btn btn-danger">Back</a>
+
+<div class="container" >
+
+  <div class="alert alert-success" role="alert" *ngIf="success">
+    <strong>Well done!</strong> Register with success
+  </div>
+
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    <strong>Oh snap!</strong> Register failed
+  </div>
+
+  <form id="loginForm"  >
+    LOGIN
+    <div class="form-group">
+      <label for="username" > Username:</label>
+      <input type="text" class="form-control"placeholder="Enter your username" id="username" name="username"  />
+    </div>
+
+    <div class="form-group">
+      <label for="password" >Password:</label>
+      <input type="password" class="form-control" id="password"  placeholder="Enter your password" name="password"  >
+    </div>
+
+  </form>
+  <div>
+    <button type="submit" form="loginForm" class="btn btn-primary" >Send</button> &nbsp;
+    <button type="reset" form="loginForm" class="btn btn-primary" >Clear</button>&nbsp;
+    <a routerLink="/"><button type="button" class="btn btn-primary" >Back</button> </a>
+  </div>
+
+</div>
+
+
+
+

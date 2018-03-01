@@ -7,6 +7,7 @@ import { LandingPageLoginComponent } from './landing-page-login/landing-page-log
 import { SharedModule } from '@app/shared/shared.module';
 import { LandingPageWrapperComponent } from './landing-page-wrapper/landing-page-wrapper.component';
 import { CoreModule } from '@app/core';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { CoreModule } from '@app/core';
     SharedModule,
     CoreModule,
     LandingPageRoutingModule,
+    FormsModule,
   ],
   declarations: [
     LandingPageIntroductionComponent,
